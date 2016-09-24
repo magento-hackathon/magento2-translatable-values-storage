@@ -24,6 +24,8 @@ namespace Hackathon\Translationstorage\Setup;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\InstallSchemaInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
+use Magento\Framework\DB\Adapter\AdapterInterface;
+use Magento\Framework\DB\Ddl\Table;
 
 class InstallSchema implements InstallSchemaInterface
 {
@@ -78,11 +80,21 @@ class InstallSchema implements InstallSchemaInterface
 		);
 
 		$table->addColumn(
-			'$table',
+			'locale',
 			\Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
 			null,
 			[],
 			'locale'
+		);
+
+		$table->addIndex(
+			$installer->getIdxName(
+				'token_locale_identifier',
+				[ 'token', 'locale' ],
+				AdapterInterface::INDEX_TYPE_UNIQUE
+			),
+			[ 'token', 'locale' ],
+			[ 'type' => AdapterInterface::INDEX_TYPE_UNIQUE ]
 		);
 
 		$setup->getConnection()->createTable($table);
