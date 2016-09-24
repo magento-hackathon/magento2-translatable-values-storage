@@ -2,7 +2,7 @@
 
 namespace Hackathon\Translationstorage\Api\Data;
 
-interface ValuesRepositoryInterface
+interface ValueRepositoryInterface
 {
     /**
      * Create or update a value
