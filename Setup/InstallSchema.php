@@ -50,15 +50,15 @@ class InstallSchema implements InstallSchemaInterface
 		$table->addColumn(
 			'token',
 			\Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
-			null,
-			['identity' => true],
+			255,
+			[],
 			'token'
 		);
 
 		$table->addColumn(
 			'source',
 			\Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
-			null,
+			255,
 			[],
 			'source'
 		);
@@ -66,14 +66,14 @@ class InstallSchema implements InstallSchemaInterface
 		$table->addColumn(
 			'context',
 			\Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
-			null,
+			255,
 			[],
 			'context'
 		);
 
 		$table->addColumn(
 			'translation',
-			\Magento\Framework\DB\Ddl\Table::TYPE_BLOB,
+			\Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
 			null,
 			[],
 			'translation'
@@ -82,7 +82,7 @@ class InstallSchema implements InstallSchemaInterface
 		$table->addColumn(
 			'locale',
 			\Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
-			null,
+			15,
 			[],
 			'locale'
 		);
