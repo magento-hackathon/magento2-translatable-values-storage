@@ -5,7 +5,7 @@ class ValuesRepositoryModel implements \Hackathon\Translationstorage\Api\ValuesR
 {
 
     /**
-     * Save test data.
+     * Save value data.
      */
     public function save(\Hackathon\Translationstorage\Api\Data\ValuesInterface $test)
     {
@@ -13,7 +13,7 @@ class ValuesRepositoryModel implements \Hackathon\Translationstorage\Api\ValuesR
     }
 
     /**
-     * Retrieve test data.
+     * Retrieve value data.
      */
     public function getById($testId)
     {
@@ -21,7 +21,7 @@ class ValuesRepositoryModel implements \Hackathon\Translationstorage\Api\ValuesR
     }
 
     /**
-     * Delete test.
+     * Delete value.
      */
     public function delete(\Hackathon\Translationstorage\Api\Data\ValuesInterface $test)
     {
@@ -29,7 +29,7 @@ class ValuesRepositoryModel implements \Hackathon\Translationstorage\Api\ValuesR
     }
 
     /**
-     * Delete test by test ID.
+     * Delete value by value ID.
      */
     public function deleteById($testId)
     {
