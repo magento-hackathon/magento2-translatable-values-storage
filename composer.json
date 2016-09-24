@@ -1,13 +1,14 @@
 {
     "name": "hackathon/translationstorage",
     "description": "Abstract storage layer for translations by token",
+    "type": "magento2-module",
+    "version": "0.1.0",
     "authors": [
         {
             "email": "sander@sandermangel.nl",
             "name": "Sander Mangel"
         }
     ],
-    "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "files": [
