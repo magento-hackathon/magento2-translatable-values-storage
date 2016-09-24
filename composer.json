@@ -1,0 +1,20 @@
+{
+    "name": "hackathon/translationstorage",
+    "description": "Abstract storage layer for translations by token",
+    "authors": [
+        {
+            "email": "sander@sandermangel.nl",
+            "name": "Sander Mangel"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Hackathon\\Translationstorage\\": ""
+        }
+    }
+}
